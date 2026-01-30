@@ -41,7 +41,10 @@ module HasLocking
   end
 
   def calculate_retry_time(attempts, initial_period)
-    (1.3**attempts) * initial_period
+    # Start at 15 min, increase by 15 min each attempt, cap at 4 hours
+    # This aligns with industry-standard greylisting retry expectations (especially for EOP/Outlook)
+    base = 15.minutes
+    [base + (attempts * 15.minutes), 4.hours].min
   end
 
 end
