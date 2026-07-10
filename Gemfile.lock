@@ -97,6 +97,7 @@ GEM
     bigdecimal (3.2.3)
     bindata (2.5.0)
     builder (3.2.4)
+    cgi (0.5.2)
     chronic (0.10.2)
     coffee-rails (5.0.0)
       coffee-script (>= 2.2.0)
@@ -371,7 +372,8 @@ GEM
       sprockets (> 3.0)
       sprockets-rails
       tilt
-    secure_headers (6.5.0)
+    secure_headers (7.3.0)
+      cgi (>= 0.1)
     securerandom (0.4.1)
     sentry-rails (5.16.1)
       railties (>= 5.0)
